@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace Devon4Net.Infrastructure.MongoDb
+namespace Devon4Net.Infrastructure.MongoDb.MongoDb
 {
     public interface IMongoDbContext
     {

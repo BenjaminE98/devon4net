@@ -91,8 +91,8 @@ namespace Devon4Net.Application.WebAPI.Implementation.Configuration
         /// <param name="configuration"></param>
         private static void SetupDatabase(IServiceCollection services, IConfiguration configuration)
         {
-            services.SetupDatabase<TodoContext>(configuration, "Default", DatabaseType.InMemory).ConfigureAwait(false);
-            services.SetupDatabase<EmployeeContext>(configuration, "Employee", DatabaseType.InMemory).ConfigureAwait(false);
+            services.SetupDatabase<TodoContext>(configuration, "Default", DatabaseType.MongoDb).ConfigureAwait(false);
+            services.SetupDatabase<EmployeeContext>(configuration, "Employee", DatabaseType.MongoDb).ConfigureAwait(false);
         }
 
         private static void SetupJwtPolicies(IServiceCollection services)

@@ -8,6 +8,7 @@ namespace Devon4Net.Infrastructure.Common.Options.MongoDb
 {
     public class MongoDbOptions
     {
+        /*
         public string Host { get; set; }
 
         public string Port { get; set; }
@@ -21,5 +22,9 @@ namespace Devon4Net.Infrastructure.Common.Options.MongoDb
         public int ConnectionTimeout { get; set; }
 
         public int ServerSelectionTimeout { get; set; }
+        */
+
+        public bool EnableMongoDb { get; set; }
+        public string DatabaseLocation { get; set; }
     }
 }

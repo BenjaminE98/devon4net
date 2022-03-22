@@ -98,7 +98,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devon4Net.Infrastructure.AW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devon4Net.Infrastructure.AWS.SQS.ConsoleApplication", "Templates\AWS\Devon4Net.Infrastructure.AWS.SQS.ConsoleApplication\Devon4Net.Infrastructure.AWS.SQS.ConsoleApplication.csproj", "{6B7EC34D-BC71-4292-98C8-7514F54BBC9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devon4Net.Infrastructure.MongoDb", "Modules\Devon4Net.Infrastructure.MongoDb\Devon4Net.Infrastructure.MongoDb.csproj", "{BD3C36ED-5C1A-408B-B968-E317B368CC1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devon4Net.Infrastructure.MongoDb", "Modules\Devon4Net.Infrastructure.MongoDb\Devon4Net.Infrastructure.MongoDb.csproj", "{BD3C36ED-5C1A-408B-B968-E317B368CC1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testbench", "Templates\Testbench\Testbench\Testbench.csproj", "{573505E8-9AA9-4C0D-A6B9-8465CEE1267B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestBench", "TestBench", "{BD93D6A4-A4B8-4008-997E-41DB4A637614}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -250,6 +254,10 @@ Global
 		{BD3C36ED-5C1A-408B-B968-E317B368CC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3C36ED-5C1A-408B-B968-E317B368CC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD3C36ED-5C1A-408B-B968-E317B368CC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573505E8-9AA9-4C0D-A6B9-8465CEE1267B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573505E8-9AA9-4C0D-A6B9-8465CEE1267B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573505E8-9AA9-4C0D-A6B9-8465CEE1267B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573505E8-9AA9-4C0D-A6B9-8465CEE1267B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -297,6 +305,9 @@ Global
 		{8E717A7B-8021-4836-8E2B-0BCC34FB53B1} = {7F01F674-F054-448E-A8FF-6BB1845D942D}
 		{8B1D9CD0-CE52-42DC-A576-587F190F88EE} = {F3974B4E-9A4D-4E88-A165-2E84872681C0}
 		{6B7EC34D-BC71-4292-98C8-7514F54BBC9E} = {7F01F674-F054-448E-A8FF-6BB1845D942D}
+		{BD3C36ED-5C1A-408B-B968-E317B368CC1B} = {C2CE6A98-0264-4EE1-A58A-38BB6C1B6179}
+		{573505E8-9AA9-4C0D-A6B9-8465CEE1267B} = {BD93D6A4-A4B8-4008-997E-41DB4A637614}
+		{BD93D6A4-A4B8-4008-997E-41DB4A637614} = {5DC7E2B4-40CC-4083-8D68-B14482C1949D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {986CD1FB-4839-41E2-81B5-EEBB4D9485F3}

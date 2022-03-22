@@ -1,0 +1,3 @@
+2022-03-22 16:18:56.665 +01:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-03-22 16:18:57.045 +01:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-03-22 16:18:57.046 +01:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb

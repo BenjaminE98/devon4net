@@ -21,15 +21,13 @@ namespace Devon4Net.Infrastructure.MongoDb.MongoDb
 
         public MongoDbContext(IOptions<MongoDbOptions> options)
         {
-            // TODO: Fix this
+            // TODO: check if null-non-existent
 
-            var connectionString = "mongodb://AzureDiamond:hunter2@mongo:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
+            this.MongoClient = new MongoClient(options.Value.DatabaseLocation);
 
-            this.MongoClient = new MongoClient(connectionString);
+            var dbList = this.MongoClient.ListDatabases().ToList();
 
             this.Database = MongoClient.GetDatabase("Users");
         }
-
-
     }
 }
