@@ -98,6 +98,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devon4Net.Infrastructure.AW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devon4Net.Infrastructure.AWS.SQS.ConsoleApplication", "Templates\AWS\Devon4Net.Infrastructure.AWS.SQS.ConsoleApplication\Devon4Net.Infrastructure.AWS.SQS.ConsoleApplication.csproj", "{6B7EC34D-BC71-4292-98C8-7514F54BBC9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devon4Net.Infrastructure.MongoDb", "Modules\Devon4Net.Infrastructure.MongoDb\Devon4Net.Infrastructure.MongoDb.csproj", "{BD3C36ED-5C1A-408B-B968-E317B368CC1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -244,6 +246,10 @@ Global
 		{6B7EC34D-BC71-4292-98C8-7514F54BBC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B7EC34D-BC71-4292-98C8-7514F54BBC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B7EC34D-BC71-4292-98C8-7514F54BBC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3C36ED-5C1A-408B-B968-E317B368CC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3C36ED-5C1A-408B-B968-E317B368CC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3C36ED-5C1A-408B-B968-E317B368CC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3C36ED-5C1A-408B-B968-E317B368CC1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
