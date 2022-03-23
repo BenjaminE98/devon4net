@@ -2,6 +2,8 @@ namespace Testbench
 {
     public class WeatherForecast
     {
+        public Guid _id { get; set; }
+
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

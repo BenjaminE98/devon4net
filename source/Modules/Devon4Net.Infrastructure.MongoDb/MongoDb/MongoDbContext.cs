@@ -25,8 +25,6 @@ namespace Devon4Net.Infrastructure.MongoDb.MongoDb
 
             this.MongoClient = new MongoClient(options.Value.DatabaseLocation);
 
-            var dbList = this.MongoClient.ListDatabases().ToList();
-
             this.Database = MongoClient.GetDatabase("Users");
         }
     }

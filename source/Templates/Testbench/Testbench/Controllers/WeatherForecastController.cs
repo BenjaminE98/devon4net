@@ -27,7 +27,27 @@ namespace Testbench.Controllers
         {
             Repository<WeatherForecast> repository = new Repository<WeatherForecast>(_mongoDbContext);
 
-            return repository.Get();
+            return repository.Get(x => x.TemperatureC == 35);
+        }
+
+        [HttpGet("{id}")]
+        public WeatherForecast Get(Guid guid)
+        {
+            Repository<WeatherForecast> repository = new Repository<WeatherForecast>(_mongoDbContext);
+
+            return repository.GetFirstOrDefault(x => x._id == guid);
+        }
+
+        [HttpPut(Name = "PutWeatherForecast")]
+        public void Put()
+        {
+            WeatherForecast forecast = new WeatherForecast();
+            forecast.TemperatureC = 35;
+            forecast._id = Guid.NewGuid();
+            
+            Repository<WeatherForecast> repository = new Repository<WeatherForecast>(_mongoDbContext);
+
+            repository.Create(forecast);
         }
     }
 }
