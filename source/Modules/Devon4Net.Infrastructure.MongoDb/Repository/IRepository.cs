@@ -17,6 +17,8 @@ namespace Devon4Net.Infrastructure.MongoDb.Repository
 
         IEnumerable<T> Get(Expression<Func<T, bool>> predicate);
 
+        IEnumerable<T> Get(Expression<Func<T, bool>> predicate, int skip = 0, int limit = int.MaxValue);
+
         T GetFirstOrDefault(Expression<Func<T, bool>> predicate);
 
         void Update(Expression<Func<T, bool>> predicate, T updatedEntity);

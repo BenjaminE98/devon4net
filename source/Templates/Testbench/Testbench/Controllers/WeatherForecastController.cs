@@ -30,12 +30,20 @@ namespace Testbench.Controllers
             return repository.Get(x => x.TemperatureC == 35);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetWithId")]
         public WeatherForecast Get(Guid guid)
         {
             Repository<WeatherForecast> repository = new Repository<WeatherForecast>(_mongoDbContext);
 
             return repository.GetFirstOrDefault(x => x._id == guid);
+        }
+
+        [HttpGet("GetWithSkipAndLimit")]
+        public IEnumerable<WeatherForecast> Get(int skip, int limit)
+        {
+            Repository<WeatherForecast> repository = new Repository<WeatherForecast>(_mongoDbContext);
+
+            return repository.Get(x => true, skip, limit);
         }
 
         [HttpPut(Name = "PutWeatherForecast")]

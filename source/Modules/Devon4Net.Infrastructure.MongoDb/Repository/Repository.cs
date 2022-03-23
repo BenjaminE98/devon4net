@@ -16,8 +16,6 @@ namespace Devon4Net.Infrastructure.MongoDb.Repository
 
         private readonly IMongoCollection<T> MongoCollection;
 
-        private readonly FilterDefinitionBuilder<T> FilterDefinitionBuilder = Builders<T>.Filter;
-
         public Repository(IMongoDbContext mongoDbContext)
         {
             MongoDb = mongoDbContext?.Database ?? throw new ArgumentException("The database can not be null! Please check your connection-settings!");
@@ -41,6 +39,12 @@ namespace Devon4Net.Infrastructure.MongoDb.Repository
         public IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
         {
             return MongoCollection.Find<T>(predicate).ToList();
+        }
+
+        // Get - returns all entites as an enumerable (under the condition of matching the predicate and skipping the first n values and limiting to amount m)
+        public IEnumerable<T> Get(Expression<Func<T, bool>> predicate, int skip = 0, int limit = int.MaxValue)
+        {
+            return MongoCollection.Find(predicate).Skip(skip).Limit(limit).ToList();
         }
 
         // Get - returns the first matching entity or a defaulted value (under the condition of matching the predicate)
