@@ -82,7 +82,7 @@ namespace Devon4Net.Domain.UnitOfWork.Common
                     break;
                 case DatabaseType.InMemory:
                     services.AddDbContext<T>(options => options.UseInMemoryDatabase(connectionString), ServiceLifetime);
-                    break;
+                    break;   
                 case DatabaseType.MySql:
                     services.AddDbContext<T>(options => options.UseMySql(ServerVersion.AutoDetect(connectionString), sqlOptions =>
                     {
@@ -125,6 +125,8 @@ namespace Devon4Net.Domain.UnitOfWork.Common
                 case DatabaseType.Oracle:
                     services.AddDbContext<T>(options => options.UseOracle(connectionString), ServiceLifetime);
                     break;
+                case databaseType.MongoDb:
+                    services.AddDbContext<T>(options => options.UseMongoDatabase(connectionString), ServiceLifetime); 
                 default:
                     throw new ArgumentException("Not provided a database driver");
             }
